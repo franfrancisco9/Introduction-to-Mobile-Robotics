@@ -1,0 +1,145 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/devices/sick/protos/SickLms291.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/obstacles/protos/OilBarrel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.43347931512349336 0.44815831868430245 0.7818246636900925 1.782030008789364
+  position 2.85250936088311 -28.094921656421747 46.946857851785076
+}
+TexturedBackground {
+  luminosity 0
+  skybox FALSE
+}
+TexturedBackgroundLight {
+  castShadows FALSE
+}
+DEF RectangleArena RectangleArena {
+  floorSize 13 10
+  floorTileSize 2 2
+  wallHeight 0.5
+}
+DEF Pioneer3dx Pioneer3dx {
+  translation -4.67059 -3.92991 0.0975
+  rotation 0 0 1 1.5708
+  controller "fast_slam_controller"
+  supervisor TRUE
+  extensionSlot [
+    SickLms291 {
+      translation 0 0 0.21
+      noise 0.1
+      resolution 11
+    }
+  ]
+}
+DEF Obs_1 OilBarrel {
+  translation -3.3046 -3.53155 0.44
+  name "oil barrel_1"
+}
+DEF Obs_2 OilBarrel {
+  translation -4.55226 -1.06251 0.44
+  rotation 0 0 1 -0.523595307179586
+  name "oil barrel_2"
+}
+DEF Obs_4 OilBarrel {
+  translation 0.596471 3.21544 0.44
+  rotation 0 0 -1 0.523595
+  name "oil barrel_4"
+}
+DEF Obs_5 OilBarrel {
+  translation 3.75375 2.78019 0.44
+  rotation 0 0 1 -0.523595307179586
+  name "oil barrel_5"
+}
+DEF Obs_6 OilBarrel {
+  translation 4.52303 0.124555 0.44
+  rotation 0 0 1 -0.523595307179586
+  name "oil barrel_6"
+}
+DEF Obs_7 OilBarrel {
+  translation 3.74234 -2.64368 0.44
+  rotation 0 0 1 -0.523595307179586
+  name "oil barrel_7"
+}
+DEF Obs_8 OilBarrel {
+  translation 0.536488 -2.46661 0.44
+  rotation 0 0 1 -0.523595307179586
+  name "oil barrel_8"
+}
+DEF Obs_9 OilBarrel {
+  translation 0.516221 0.00788357 0.44
+  rotation 0 0 -1 0.261796
+  name "oil barrel_9"
+}
+DEF Obs_3 OilBarrel {
+  translation -2.15444 1.49612 0.44
+  rotation 0 0 1 -0.523595307179586
+  name "oil barrel_3"
+}
+DEF wall(0) Wall {
+  translation -5.56 -4.63 0.44
+  rotation -0.9831056944488314 0.1294279597735375 -0.1294279597735375 1.58783
+  name "wall(0)"
+  size 0.2 1 4
+}
+DEF wall(1) Wall {
+  translation -4.60235 -1.05604 0.440008
+  rotation -0.8628563066501258 0.3574071270187627 -0.35740612701840735 1.71777
+  name "wall(1)"
+  size 0.2 1 4
+}
+DEF wall(9) Wall {
+  translation 3.6144 -2.6399 0.439999
+  rotation 0.9351132545462786 -0.25056306820553154 0.25056206820525934 -1.6378353071795866
+  name "wall(9)"
+  size 0.2 1 2.5
+}
+DEF wall(5) Wall {
+  translation 0.655869 -0.038965 0.440008
+  rotation 0.8628563066501258 -0.3574071270187627 0.35740612701840735 -1.7177753071795863
+  name "wall(5)"
+  size 0.2 1 4
+}
+DEF wall(6) Wall {
+  translation -1.85168 1.69466 0.440008
+  rotation -0.774596867708936 0.44721392362168216 -0.44721292362185294 1.82348
+  name "wall(6)"
+  size 0.2 1 4
+}
+DEF wall(7) Wall {
+  translation 0.17996 -2.56323 0.440011
+  rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
+  name "wall(7)"
+  size 0.2 1 4
+}
+DEF wall(8) Wall {
+  translation 4.81307 -0.998342 0.440006
+  rotation 0.9831054064615734 0.1294290535120002 -0.1294290535120002 -1.5878353071795859
+  name "wall(8)"
+  size 0.2 1 4
+}
+DEF wall(2) Wall {
+  translation -3.62819 -5.14764 0.44
+  rotation -0.9831056944488314 0.1294279597735375 -0.1294279597735375 1.58783
+  name "wall(2)"
+  size 0.2 1 2
+}
+DEF wall(3) Wall {
+  translation -3.20753 -3.50036 0.44
+  rotation -0.6776611791699123 0.5199891374822863 -0.5199871374817574 1.95044
+  name "wall(3)"
+  size 0.2 1 4
+}
+DEF wall(4) Wall {
+  translation -2.09822 1.45122 0.440022
+  rotation -0.28108510281603044 0.6785992482197749 -0.6785972482190434 2.59357
+  name "wall(4)"
+  size 0.2 1 2
+}
